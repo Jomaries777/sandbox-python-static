@@ -1,0 +1,10 @@
+node_modules/
+dist/
+coverage/
+test-results/
+playwright-report/
+blob-report/
+package-lock.json
+# Indented on purpose: bootstrap appends it to the updates: list in
+# .github/dependabot.yml, then deletes it.
+dependabot-updates.yml

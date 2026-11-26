@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# shellcheck source=deploy/targets/cloudflare-workers/lib.sh disable=SC1091
+source "$(cd "$(dirname "$0")" && pwd)/lib.sh"
+# url <env>: print the live workers.dev URL. Needs no token: the subdomain is
+# the repo variable CLOUDFLARE_WORKERS_SUBDOMAIN, set by bootstrap.
+init_common
+worker_for "${1:-}"
+worker_url
