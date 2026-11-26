@@ -1,4 +1,5 @@
-target: none                 # cloud-run (default) | cloudflare-workers | github-pages | none
+target: github-pages
+stack: python
 environments:
   dev:        { enabled: true }
   production: { approval: required }
